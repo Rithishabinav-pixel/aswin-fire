@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat {
+  border-left: 2px solid var(--line-strong);
+  padding-left: 1.25rem;
+}
+
+.value {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink-800);
+  display: block;
+}
+
+.label {
+  color: var(--ink-500);
+  font-size: 0.9375rem;
+  margin-top: 0.4rem;
+}

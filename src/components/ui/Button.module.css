@@ -1,0 +1,101 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out),
+    background-color 0.25s var(--ease-out), color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out);
+  isolation: isolate;
+}
+
+.btn svg {
+  transition: transform 0.35s var(--ease-out);
+}
+
+.btn:hover svg {
+  transform: translate(3px, -2px);
+}
+
+/* Primary — fire-red, the main conversion action */
+.primary {
+  background: var(--red-600);
+  color: var(--paper);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary:hover {
+  background: var(--red-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Secondary — outline on light backgrounds */
+.secondary {
+  background: transparent;
+  color: var(--ink-800);
+  border: 1.5px solid var(--line-strong);
+}
+
+.secondary:hover {
+  border-color: var(--ink-800);
+  transform: translateY(-2px);
+}
+
+/* Ghost on dark backgrounds */
+.onDark {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--paper);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.onDark:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Text link style */
+.link {
+  background: none;
+  color: var(--ink-800);
+  padding: 0.2rem 0;
+  border-radius: 0;
+  gap: 0.4rem;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0.3);
+  transform-origin: left;
+  opacity: 0.4;
+  transition: transform 0.35s var(--ease-out), opacity 0.35s var(--ease-out);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.sm {
+  padding: 0.65rem 1.2rem;
+  font-size: 0.875rem;
+}
+
+.full {
+  width: 100%;
+}

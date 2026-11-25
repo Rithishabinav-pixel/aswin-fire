@@ -1,0 +1,62 @@
+.wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-800);
+  color: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 900px) {
+  .wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(640px circle at 10% 0%, rgba(215, 38, 30, 0.3), transparent 60%);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.text {
+  color: var(--ink-200);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  max-width: 28rem;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.contactItem svg {
+  color: var(--red-500);
+}
+
+.formWrap {
+  position: relative;
+}

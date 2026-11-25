@@ -1,0 +1,73 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--warm-50);
+  border: 1px solid var(--line);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.field select,
+.field input {
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  font-size: 0.9375rem;
+}
+
+.field select:focus,
+.field input:focus {
+  outline: none;
+  border-color: var(--red-600);
+}
+
+.count {
+  font-size: 0.9375rem;
+  color: var(--ink-500);
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.empty {
+  padding: 3rem;
+  text-align: center;
+  color: var(--ink-500);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-md);
+}

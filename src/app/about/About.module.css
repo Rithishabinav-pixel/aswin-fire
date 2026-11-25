@@ -1,0 +1,308 @@
+.whoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .whoGrid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.lead {
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--ink-700);
+}
+
+.lead + .lead {
+  margin-top: 1.25rem;
+}
+
+.factCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  background: var(--warm-50);
+  align-self: start;
+}
+
+.factRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9375rem;
+}
+
+.factRow:last-child {
+  border-bottom: none;
+}
+
+.factLabel {
+  color: var(--ink-500);
+}
+
+.factValue {
+  font-weight: 700;
+  text-align: right;
+}
+
+.mdWrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: var(--radius-lg);
+  background: var(--ink-800);
+  color: var(--paper);
+}
+
+@media (min-width: 800px) {
+  .mdWrap {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
+
+.avatar {
+  flex: none;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.75rem;
+  background: var(--red-600);
+  color: var(--paper);
+}
+
+.mdQuote {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.mdName {
+  font-weight: 700;
+}
+
+.mdTitle {
+  color: var(--ink-300);
+  font-size: 0.875rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .twoCol {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visionCard {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.visionLabel {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red-600);
+  margin-bottom: 0.75rem;
+}
+
+.visionText {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 760px) {
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.valueCard {
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  background: var(--warm-50);
+}
+
+.valueIcon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: var(--red-50);
+  color: var(--red-600);
+  margin-bottom: 1rem;
+}
+
+.valueTitle {
+  font-size: 1.0625rem;
+  margin-bottom: 0.4rem;
+}
+
+.valueText {
+  font-size: 0.9375rem;
+  color: var(--ink-500);
+  line-height: 1.55;
+}
+
+.stageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 760px) {
+  .stageGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stageCard {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  position: relative;
+}
+
+.stageIndex {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: var(--ink-200);
+  margin-bottom: 1rem;
+}
+
+.stageTitle {
+  font-size: 1.125rem;
+  margin-bottom: 0.6rem;
+}
+
+.stageText {
+  color: var(--ink-500);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.peopleWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .peopleWrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.peopleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.peopleTile {
+  padding: 1.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--warm-50);
+  text-align: center;
+}
+
+.peopleTileValue {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--red-600);
+}
+
+.peopleTileLabel {
+  font-size: 0.8125rem;
+  color: var(--ink-500);
+  margin-top: 0.25rem;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.chip {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--warm-100);
+  color: var(--ink-700);
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 700px) {
+  .badgeGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.badgeCard {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.badgeIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--red-50);
+  color: var(--red-600);
+  margin-bottom: 0.75rem;
+}
+
+.badgeLabel {
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.badgeNote {
+  font-size: 0.8125rem;
+  color: var(--ink-500);
+  margin-top: 0.25rem;
+}

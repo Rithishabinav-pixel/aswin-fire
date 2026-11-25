@@ -1,0 +1,36 @@
+.wrap {
+  max-width: 46rem;
+}
+
+.wrap + .wrap {
+  margin-top: 1rem;
+}
+
+.center {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink-500);
+}
+
+.light .title {
+  color: var(--paper);
+}
+
+.light .description {
+  color: var(--ink-200);
+}

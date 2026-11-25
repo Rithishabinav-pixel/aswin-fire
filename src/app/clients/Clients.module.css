@@ -1,0 +1,29 @@
+.regionGroup {
+  margin-bottom: 1.75rem;
+}
+
+.regionState {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.regionCities {
+  color: var(--ink-500);
+  font-size: 0.9375rem;
+}
+
+.regionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 760px) {
+  .regionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

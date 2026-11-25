@@ -1,0 +1,30 @@
+.nav {
+  padding-block: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink-500);
+}
+
+.list a {
+  color: var(--ink-500);
+  transition: color 0.2s var(--ease-out);
+}
+
+.list a:hover {
+  color: var(--red-600);
+}
+
+.current {
+  color: var(--ink-800);
+  font-weight: 600;
+}
+
+.sep {
+  opacity: 0.5;
+}

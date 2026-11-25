@@ -1,0 +1,99 @@
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-block: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.row:first-child {
+  border-top: none;
+}
+
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+  }
+}
+
+.visual {
+  position: relative;
+  min-height: 220px;
+  border-radius: var(--radius-md);
+  background: var(--ink-800);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.75rem;
+}
+
+.visualPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(circle at 25% 20%, rgba(215, 38, 30, 0.35), transparent 55%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 26px 26px, 26px 26px;
+}
+
+.visualIcon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--paper);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.summary {
+  color: var(--ink-700);
+  line-height: 1.7;
+  font-size: 1.0625rem;
+  margin-bottom: 1.5rem;
+}
+
+.systemsLabel {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 0.75rem;
+}
+
+.systemsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.systemChip {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: var(--warm-100);
+  color: var(--ink-700);
+}
+
+.clientsLine {
+  font-size: 0.875rem;
+  color: var(--ink-500);
+  margin-bottom: 1.25rem;
+}
+
+.clientsLine strong {
+  color: var(--ink-800);
+}
