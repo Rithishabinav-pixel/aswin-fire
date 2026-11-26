@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Reveal from "@/components/ui/Reveal";
+import ClientLogoCard from "@/components/ui/ClientLogoCard";
 import styles from "./ClientLogoWall.module.css";
 
 export default function ClientLogoWall({ sectors }) {
@@ -29,9 +29,7 @@ export default function ClientLogoWall({ sectors }) {
       </div>
       <div className={styles.grid}>
         {clients.map((c, i) => (
-          <Reveal as="div" delay={(i % 8) * 40} className={styles.logo} key={`${active}-${c}`}>
-            {c}
-          </Reveal>
+          <ClientLogoCard client={c} delay={(i % 8) * 40} key={`${active}-${c.name}`} />
         ))}
       </div>
     </div>

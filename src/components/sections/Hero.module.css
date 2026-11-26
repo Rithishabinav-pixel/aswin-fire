@@ -1,10 +1,21 @@
-.hero {
+.heroSlider {
+  position: relative;
+}
+
+.heroSlider :global(.arrow) {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.slide {
   position: relative;
   overflow: hidden;
   background: var(--ink-800);
   color: var(--paper);
   padding-top: clamp(3.5rem, 8vw, 6rem);
   padding-bottom: clamp(4rem, 9vw, 7rem);
+  min-height: clamp(520px, 72vh, 720px);
+  display: flex;
+  align-items: center;
 }
 
 .bg {
@@ -25,6 +36,10 @@
   filter: blur(10px);
 }
 
+.glow1.amber {
+  background: radial-gradient(circle, rgba(226, 152, 44, 0.3), transparent 65%);
+}
+
 .glow2 {
   position: absolute;
   bottom: -20%;
@@ -39,6 +54,7 @@
 .content {
   position: relative;
   z-index: 1;
+  width: 100%;
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr;
@@ -47,7 +63,7 @@
 @media (min-width: 980px) {
   .content {
     grid-template-columns: 1.3fr 0.9fr;
-    align-items: end;
+    align-items: center;
   }
 }
 
@@ -85,46 +101,25 @@
   gap: 1rem;
 }
 
-.sidePanel {
+.markWrap {
+  display: none;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
 }
 
-.sidePanelLabel {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-200);
-  margin-bottom: 1.25rem;
+@media (min-width: 980px) {
+  .markWrap {
+    display: flex;
+  }
 }
 
-.sidePanelGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.sidePanelStat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.sidePanelValue {
-  font-size: 1.75rem;
-  color: var(--paper);
-}
-
-.sidePanelKey {
-  font-size: 0.8125rem;
-  color: var(--ink-200);
-  line-height: 1.4;
+.markGlow {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  opacity: 0.9;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.35));
 }
 
 .scrollCue {
@@ -133,7 +128,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-top: clamp(3rem, 6vw, 4.5rem);
+  margin-top: clamp(2rem, 5vw, 3rem);
   color: var(--ink-300);
   font-size: 0.8125rem;
   font-family: var(--font-display);

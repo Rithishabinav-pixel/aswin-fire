@@ -1,72 +1,49 @@
-.list {
-  position: relative;
+.scroller {
+  display: flex;
+  gap: 1.5rem;
   margin-top: 3rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
 }
 
-.list::before {
-  content: "";
-  position: absolute;
-  left: 23px;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 1.5px;
+.scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
   background: var(--line-strong);
-}
-
-@media (min-width: 760px) {
-  .list::before {
-    left: 50%;
-    transform: translateX(-0.75px);
-  }
+  border-radius: var(--radius-pill);
 }
 
 .step {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 250px;
   position: relative;
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 1.5rem;
-  padding-bottom: 2.75rem;
+  padding-top: 2.5rem;
 }
 
-@media (min-width: 760px) {
-  .step {
-    grid-template-columns: 1fr 48px 1fr;
-    gap: 2.5rem;
-  }
-
-  .step:nth-child(even) .card {
-    grid-column: 1;
-    text-align: right;
-  }
-
-  .step:nth-child(even) .card .meta {
-    justify-content: flex-end;
-  }
-
-  .step:nth-child(odd) .card {
-    grid-column: 3;
-  }
-
-  .step:nth-child(even) .spacer {
-    grid-column: 3;
-  }
+.step::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  right: -1.5rem;
+  height: 1.5px;
+  background: var(--line-strong);
 }
 
-.spacer {
+.step:last-child::before {
   display: none;
-}
-
-@media (min-width: 760px) {
-  .spacer {
-    display: block;
-  }
 }
 
 .marker {
   position: relative;
   z-index: 1;
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: var(--paper);
   border: 1.5px solid var(--line-strong);
@@ -75,46 +52,33 @@
   font-family: var(--font-display);
   font-weight: 800;
   color: var(--red-600);
-}
-
-@media (min-width: 760px) {
-  .marker {
-    grid-column: 2;
-  }
-}
-
-.card {
-  padding-top: 0.2rem;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .badge {
+  display: block;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-500);
+  margin-bottom: 0.4rem;
 }
 
 .cardTitle {
-  font-size: 1.1875rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
 }
 
 .cardText {
   color: var(--ink-500);
   line-height: 1.6;
-  max-width: 30rem;
+  font-size: 0.9375rem;
 }
 
-@media (min-width: 760px) {
-  .step:nth-child(even) .cardText {
-    margin-left: auto;
-  }
+.hint {
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  color: var(--ink-300);
+  text-align: center;
 }

@@ -10,44 +10,6 @@
   }
 }
 
-.brandRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.brandChip {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.9375rem;
-  padding: 0.85rem 1.4rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  color: var(--ink-700);
-}
-
-.badgeRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.badge {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.7rem 1.1rem;
-  border-radius: var(--radius-pill);
-  background: var(--warm-100);
-  color: var(--ink-700);
-}
-
-.badge svg {
-  color: var(--red-600);
-}
-
 .label {
   font-family: var(--font-display);
   font-weight: 700;
@@ -56,4 +18,46 @@
   text-transform: uppercase;
   color: var(--ink-500);
   margin-bottom: 1.25rem;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.certSlide {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  background: var(--warm-50);
+  border: 1px solid var(--line);
+  min-height: 140px;
+}
+
+.certIcon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--red-50);
+  color: var(--red-600);
+}
+
+.certTitle {
+  font-size: 1.125rem;
+  margin-bottom: 0.35rem;
+}
+
+.certNote {
+  color: var(--ink-500);
+  font-size: 0.9375rem;
+}
+
+.certSliderWrap {
+  padding-inline: 2.5rem;
 }

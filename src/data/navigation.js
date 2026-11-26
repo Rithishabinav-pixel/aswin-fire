@@ -2,7 +2,6 @@ import { solutions } from "./solutions";
 import { industries } from "./industries";
 
 export const mainNav = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
     label: "Solutions",
@@ -35,7 +34,6 @@ export const mainNav = [
   { label: "Projects", href: "/projects" },
   { label: "AMC & Services", href: "/amc-maintenance" },
   { label: "Clients", href: "/clients" },
-  { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -47,6 +45,7 @@ export const footerNav = {
     { label: "Projects", href: "/projects" },
     { label: "Products & Equipment", href: "/products" },
     { label: "Clients", href: "/clients" },
+    { label: "Resources", href: "/resources" },
     { label: "Careers", href: "/careers" },
   ],
   legal: [

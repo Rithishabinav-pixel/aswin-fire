@@ -5,6 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import Icon from "@/components/ui/Icon";
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import { company } from "@/data/company";
+import { partnerLogos } from "@/data/partners";
 import styles from "./About.module.css";
 
 export const metadata = {
@@ -244,7 +245,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading eyebrow="Technology partners" title="Authorised to supply and install" />
           <div style={{ marginTop: "2.5rem" }}>
-            <LogoMarquee items={company.brands} />
+            <LogoMarquee items={partnerLogos} />
           </div>
         </div>
       </section>

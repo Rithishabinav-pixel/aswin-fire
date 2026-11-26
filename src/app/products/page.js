@@ -6,7 +6,7 @@ import Icon from "@/components/ui/Icon";
 import Button from "@/components/ui/Button";
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import { productCategories } from "@/data/products";
-import { company } from "@/data/company";
+import { partnerLogos } from "@/data/partners";
 import styles from "./Products.module.css";
 
 export const metadata = {
@@ -49,7 +49,7 @@ export default function ProductsPage() {
         <div className="container">
           <SectionHeading eyebrow="Brands we work with" title="Authorised to supply and install" />
           <div style={{ marginTop: "2.5rem" }}>
-            <LogoMarquee items={company.brands} />
+            <LogoMarquee items={partnerLogos} />
           </div>
         </div>
       </section>

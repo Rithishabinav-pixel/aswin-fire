@@ -2,6 +2,7 @@ import { Manrope, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/layout/MobileStickyBar";
+import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 import { company } from "@/data/company";
 import "./globals.css";
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
         <main id="main-content">{children}</main>
         <Footer />
         <MobileStickyBar />
+        <WhatsAppFloat />
       </body>
     </html>
   );

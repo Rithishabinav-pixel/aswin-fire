@@ -42,23 +42,17 @@ export default function HowWeWork() {
           title="From site survey to lifetime support"
           align="center"
         />
-        <div className={styles.list}>
+        <div className={styles.scroller}>
           {steps.map((step, i) => (
-            <div className={styles.step} key={step.title}>
-              <Reveal as="span" className={styles.marker} delay={i * 60}>
-                {i + 1}
-              </Reveal>
-              <Reveal delay={i * 60 + 60} className={styles.card}>
-                <div className={styles.meta}>
-                  <span className={styles.badge}>Step {String(i + 1).padStart(2, "0")}</span>
-                </div>
-                <h3 className={styles.cardTitle}>{step.title}</h3>
-                <p className={styles.cardText}>{step.text}</p>
-              </Reveal>
-              <span className={styles.spacer} />
-            </div>
+            <Reveal as="div" delay={i * 70} className={styles.step} key={step.title}>
+              <span className={styles.marker}>{i + 1}</span>
+              <span className={styles.badge}>Step {String(i + 1).padStart(2, "0")}</span>
+              <h3 className={styles.cardTitle}>{step.title}</h3>
+              <p className={styles.cardText}>{step.text}</p>
+            </Reveal>
           ))}
         </div>
+        <p className={styles.hint}>← Scroll to see the full process →</p>
       </div>
     </section>
   );

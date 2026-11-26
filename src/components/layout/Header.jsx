@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import Button from "@/components/ui/Button";
+import BrandLogo from "@/components/ui/BrandLogo";
 import { mainNav } from "@/data/navigation";
 import { company } from "@/data/company";
 import styles from "./Header.module.css";
@@ -56,15 +57,7 @@ export default function Header() {
 
       <header className={styles.header} data-scrolled={scrolled}>
         <div className={`container ${styles.inner}`}>
-          <Link href="/" className={styles.logo}>
-            <span className={styles.logoMark}>
-              <Icon name="flame" size={20} strokeWidth={2} />
-            </span>
-            <span>
-              <span className={styles.logoText}>Aswin Fire</span>
-              <span className={styles.logoSub}>Fire &amp; Life Safety</span>
-            </span>
-          </Link>
+          <BrandLogo />
 
           <nav className={styles.nav} aria-label="Primary">
             {mainNav.map((item) => (
@@ -125,12 +118,7 @@ export default function Header() {
 
       <div className={styles.mobileOverlay} data-open={mobileOpen} role="dialog" aria-modal="true">
         <div className={`container ${styles.mobileHeader}`}>
-          <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-            <span className={styles.logoMark}>
-              <Icon name="flame" size={20} strokeWidth={2} />
-            </span>
-            <span className={styles.logoText}>Aswin Fire</span>
-          </Link>
+          <BrandLogo showSub={false} onClick={() => setMobileOpen(false)} />
           <button
             type="button"
             className={styles.menuToggle}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Icon from "@/components/ui/Icon";
+import BrandLogo from "@/components/ui/BrandLogo";
 import { footerNav } from "@/data/navigation";
 import { company } from "@/data/company";
 import styles from "./Footer.module.css";
@@ -12,12 +13,7 @@ export default async function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.top}`}>
         <div>
-          <Link href="/" className={styles.brand}>
-            <span className={styles.logoMark}>
-              <Icon name="flame" size={20} strokeWidth={2} />
-            </span>
-            <span className={styles.logoText}>Aswin Fire</span>
-          </Link>
+          <BrandLogo onDark showSub={false} className={styles.brand} />
           <p className={styles.about}>
             {company.legalName} designs, installs and maintains fire protection and
             life-safety systems for hospitals, industry and enterprises across South

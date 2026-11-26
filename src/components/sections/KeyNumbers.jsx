@@ -1,5 +1,6 @@
 import Reveal from "@/components/ui/Reveal";
 import StatCounter from "@/components/ui/StatCounter";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { company } from "@/data/company";
 import styles from "./KeyNumbers.module.css";
 
@@ -13,7 +14,14 @@ const stats = [
 export default function KeyNumbers() {
   return (
     <section className="section--tight">
-      <div className={`container ${styles.grid}`}>
+      <div className="container">
+        <SectionHeading
+          eyebrow="By the numbers"
+          title="Engineering at a glance"
+          align="center"
+        />
+      </div>
+      <div className={`container ${styles.grid}`} style={{ marginTop: "2.5rem" }}>
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 80} className={styles.stat}>
             <span className={styles.value}>
